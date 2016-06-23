@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="79Q-jb-9va">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="fWd-qR-AbW">
+            <objects>
+                <viewController id="iq5-tF-10u" customClass="InitialViewController" customModule="GameofSingle15" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Um7-la-eBs"/>
+                        <viewControllerLayoutGuide type="bottom" id="7uC-Nd-HoX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hSF-N3-jMy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bak" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-Qa-03F" userLabel="backGround">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu_Base" translatesAutoresizingMaskIntoConstraints="NO" id="ijT-mX-y68" userLabel="menu">
+                                <rect key="frame" x="0.0" y="131" width="375" height="461"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z97-qq-rRD">
+                                <rect key="frame" x="87" y="245" width="200" height="60"/>
+                                <state key="normal" title="Play Game" image="paly"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="WQ4-Gc-UxR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMe-eP-1V9">
+                                <rect key="frame" x="87" y="324" width="200" height="60"/>
+                                <state key="normal" title="Instruction" image="instruction"/>
+                                <connections>
+                                    <segue destination="xvc-bm-i1v" kind="modal" identifier="InstructionSegue" id="AYc-LQ-6aY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lr-sC-To3">
+                                <rect key="frame" x="87" y="410" width="200" height="60"/>
+                                <state key="normal" title="Settings" image="settings"/>
+                                <connections>
+                                    <segue destination="Uhi-3E-utP" kind="modal" id="vlq-E7-xpg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EX8-Hf-CF0">
+                                <rect key="frame" x="87" y="487" width="200" height="60"/>
+                                <state key="normal" title="Records" image="records"/>
+                                <connections>
+                                    <segue destination="Vsd-TK-uIU" kind="modal" identifier="recordSegue" id="59l-kV-dvH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title12" translatesAutoresizingMaskIntoConstraints="NO" id="Whc-lz-upy">
+                                <rect key="frame" x="48" y="41" width="278" height="59"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="v1" translatesAutoresizingMaskIntoConstraints="NO" id="A5N-mC-PiI">
+                                <rect key="frame" x="262" y="85" width="74" height="44"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sf8-lW-7Qm"/>
+                    <connections>
+                        <outlet property="instruBtn" destination="kMe-eP-1V9" id="vOc-FT-GRo"/>
+                        <outlet property="playBtn" destination="z97-qq-rRD" id="IHW-aQ-YcC"/>
+                        <outlet property="recBtn" destination="EX8-Hf-CF0" id="Ig5-cb-xM2"/>
+                        <outlet property="setBtn" destination="0lr-sC-To3" id="fY2-6q-G4i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhv-d4-H1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261.19999999999999" y="381.0333333333333"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GameofSingle15" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bak" translatesAutoresizingMaskIntoConstraints="NO" id="H4w-Es-Gd3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4A-eU-qyZ">
+                                <rect key="frame" x="216" y="121" width="139" height="57"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvd-uK-8Xh" userLabel="showBestTimeLabel">
+                                <rect key="frame" x="216" y="198" width="139" height="45"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8j-8H-D0k" userLabel="showBestMoveLabel">
+                                <rect key="frame" x="20" y="198" width="139" height="45"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title11" translatesAutoresizingMaskIntoConstraints="NO" id="lIr-X1-Pza">
+                                <rect key="frame" x="0.0" y="15" width="375" height="79"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqk-Hu-sDK" userLabel="backBtn">
+                                <rect key="frame" x="44" y="20" width="50" height="50"/>
+                                <state key="normal" title="Button" image="backBtn"/>
+                                <connections>
+                                    <segue destination="iq5-tF-10u" kind="modal" id="TH8-Xe-C9O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IE2-cn-eBG" userLabel="Refresh">
+                                <rect key="frame" x="282" y="20" width="50" height="50"/>
+                                <state key="normal" title="Button" image="Refresh"/>
+                                <connections>
+                                    <action selector="refreshTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hwQ-q7-9UJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb5-qL-FvB" userLabel="Pause">
+                                <rect key="frame" x="162" y="239" width="50" height="50"/>
+                                <state key="normal" title="Button" image="Pause"/>
+                                <connections>
+                                    <action selector="pauseGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B9c-Y4-ioY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdL-3A-NDk" userLabel="Moves Label">
+                                <rect key="frame" x="20" y="121" width="139" height="57"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="movesLabel" destination="gdL-3A-NDk" id="J9y-QQ-1mu"/>
+                        <outlet property="showBestMoveLabel" destination="P8j-8H-D0k" id="BFK-3p-Rpj"/>
+                        <outlet property="showBestTimeLabel" destination="Zvd-uK-8Xh" id="aRG-Em-46N"/>
+                        <outlet property="timerLabel" destination="l4A-eU-qyZ" id="4xK-GU-TXW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727.5" y="411.5"/>
+        </scene>
+        <!--Instruction View View Controller-->
+        <scene sceneID="OCy-co-Qia">
+            <objects>
+                <viewController id="xvc-bm-i1v" customClass="InstructionViewViewController" customModule="GameofSingle15" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TbI-Ei-KVB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qzc-aH-VMh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f68-eS-LEe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bak" translatesAutoresizingMaskIntoConstraints="NO" id="2RR-Lz-onJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tey-4X-MbG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="lVH-J1-OeN"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQH-7t-Xr6">
+                                <rect key="frame" x="20" y="20" width="50" height="50"/>
+                                <state key="normal" title="Button" image="backBtn"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="xvc-bm-i1v" eventType="touchUpInside" id="0cL-8u-ZfU"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuBack" translatesAutoresizingMaskIntoConstraints="NO" id="pLJ-5w-Rvk">
+                                <rect key="frame" x="20" y="125" width="335" height="512"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instructions" translatesAutoresizingMaskIntoConstraints="NO" id="tPY-6u-Tvq">
+                                <rect key="frame" x="95" y="54" width="184" height="74"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ef7-4q-YTC">
+                                <rect key="frame" x="40" y="159" width="297" height="444"/>
+                                <string key="text">Game of 15 puzzle is fun, simple, and entertaining. The oaject of this gams is set the tiles in numerical orders.  To move the tiles around, simply click on the tile that has an empty space next to it. You can move one or more tiles at each time. Once you have solved the puzzle you will gain a sense of accomplishment. The skills you gain will help you to be able to solve more difficult puzzles. </string>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xH-Rz-Mbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138.5" y="1155.5"/>
+        </scene>
+        <!--Option View Controller-->
+        <scene sceneID="ccb-1Z-g6n">
+            <objects>
+                <viewController id="Uhi-3E-utP" customClass="OptionViewController" customModule="GameofSingle15" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Amr-8c-P7G"/>
+                        <viewControllerLayoutGuide type="bottom" id="A3J-B4-DYo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ych-cu-lhA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bak" translatesAutoresizingMaskIntoConstraints="NO" id="efL-nd-gyP" userLabel="background">
+                                <rect key="frame" x="0.0" y="-8" width="375" height="675"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Difficulty" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAQ-Jg-POW">
+                                <rect key="frame" x="27" y="108" width="134" height="81"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHO-JO-Ig3">
+                                <rect key="frame" x="27" y="227" width="125" height="32"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Nfc-LC-swu">
+                                <rect key="frame" x="25" y="267" width="334" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="Uhi-3E-utP" eventType="valueChanged" id="Mnw-EI-f11"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-Oi-78B">
+                                <rect key="frame" x="287" y="233" width="68" height="21"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settingsTitle" translatesAutoresizingMaskIntoConstraints="NO" id="mj0-yb-QNd">
+                                <rect key="frame" x="102" y="12" width="171" height="66"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOV-4D-uHH">
+                                <rect key="frame" x="20" y="20" width="50" height="50"/>
+                                <state key="normal" title="cancel" image="backBtn"/>
+                                <connections>
+                                    <segue destination="iq5-tF-10u" kind="modal" id="IOx-5H-3M2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiA-fd-5xW">
+                                <rect key="frame" x="305" y="20" width="50" height="50"/>
+                                <state key="normal" title="ok" image="Ok"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="settingSegue" id="7u5-pr-10P"/>
+                                </connections>
+                            </button>
+                            <pickerView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QnX-dC-lgV">
+                                <rect key="frame" x="167" y="78" width="188" height="141"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Move" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmB-4x-EHg">
+                                <rect key="frame" x="45" y="376" width="154" height="21"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ticking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-QI-Y7t">
+                                <rect key="frame" x="45" y="410" width="154" height="26"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Background Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmV-E3-2oW">
+                                <rect key="frame" x="45" y="452" width="154" height="26"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cheering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syb-IU-9yQ">
+                                <rect key="frame" x="45" y="491" width="154" height="26"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ed7-ta-TJO">
+                                <rect key="frame" x="297" y="371" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpN-1Q-6BZ">
+                                <rect key="frame" x="297" y="410" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWH-xp-xVt">
+                                <rect key="frame" x="297" y="449" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0VZ-ym-ZKZ">
+                                <rect key="frame" x="297" y="325" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ih-FF-4Wv">
+                                <rect key="frame" x="297" y="488" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Applause (Top 10)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPh-n0-Bts">
+                                <rect key="frame" x="45" y="532" width="200" height="26"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Applause (Finished)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euc-zQ-zYV">
+                                <rect key="frame" x="45" y="572" width="200" height="21"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kou-vj-Aue">
+                                <rect key="frame" x="297" y="529" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jvi-CI-Tbl">
+                                <rect key="frame" x="297" y="567" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXw-g2-QSO">
+                                <rect key="frame" x="297" y="605" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-d6-7De">
+                                <rect key="frame" x="194" y="233" width="63" height="21"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="soundTitle" translatesAutoresizingMaskIntoConstraints="NO" id="bNv-Kv-vZ5">
+                                <rect key="frame" x="20" y="321" width="119" height="40"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beginning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqH-Ni-yEb">
+                                <rect key="frame" x="45" y="605" width="154" height="26"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="beginningSwitch" destination="HXw-g2-QSO" id="L6N-0a-dCV"/>
+                        <outlet property="bgmSwitch" destination="TWH-xp-xVt" id="SgB-C0-aeO"/>
+                        <outlet property="cheeringSwitch" destination="0ih-FF-4Wv" id="4wd-Si-d40"/>
+                        <outlet property="cutOffTime" destination="aJD-d6-7De" id="b0d-T4-TU8"/>
+                        <outlet property="loudAppSwitch" destination="kou-vj-Aue" id="SeG-tW-5Hd"/>
+                        <outlet property="moveSwitch" destination="Ed7-ta-TJO" id="p93-36-4a1"/>
+                        <outlet property="pickerX" destination="QnX-dC-lgV" id="K5Y-CG-gxq"/>
+                        <outlet property="politeAppSwitch" destination="Jvi-CI-Tbl" id="Ebh-l7-SQY"/>
+                        <outlet property="sliderX" destination="Nfc-LC-swu" id="Vdb-hu-k68"/>
+                        <outlet property="soundsSwitch" destination="0VZ-ym-ZKZ" id="56f-FN-iKG"/>
+                        <outlet property="tickingSwitch" destination="dpN-1Q-6BZ" id="bAr-b3-0np"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kyz-nu-8v3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264.5" y="1157.5"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="Mtk-dR-TVB">
+            <objects>
+                <viewController id="Vsd-TK-uIU" customClass="RecordViewController" customModule="GameofSingle15" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7tt-1R-LmG"/>
+                        <viewControllerLayoutGuide type="bottom" id="OM0-3C-20f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lrY-ui-ITZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bak" translatesAutoresizingMaskIntoConstraints="NO" id="rWO-qM-rW1">
+                                <rect key="frame" x="0.0" y="-8" width="375" height="675"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recordsTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Ajb-ns-UEM">
+                                <rect key="frame" x="102" y="11" width="186" height="73"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PG-fd-vEv">
+                                <rect key="frame" x="20" y="20" width="50" height="50"/>
+                                <state key="normal" title="Button" image="backBtn"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="Vsd-TK-uIU" eventType="touchUpInside" id="Kkw-PI-3Sa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f1-fl-9ov">
+                                <rect key="frame" x="160" y="98" width="80" height="25"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pRC-fh-OWc">
+                                <rect key="frame" x="25" y="127" width="340" height="479"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recordCell" rowHeight="40" id="bjt-Oj-iXG" customClass="RecordTableViewCell" customModule="GameofSingle15" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="340" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bjt-Oj-iXG" id="tTg-ek-jxK">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="39.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-bs-uqW">
+                                                    <rect key="frame" x="17" y="11" width="73" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37f-Nv-2jR">
+                                                    <rect key="frame" x="98" y="11" width="100" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvZ-6r-o8y">
+                                                    <rect key="frame" x="223" y="10" width="100" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="iMove" destination="SvZ-6r-o8y" id="xmn-NT-9Nc"/>
+                                            <outlet property="iRanking" destination="ggh-bs-uqW" id="Q0U-dn-kXP"/>
+                                            <outlet property="iTime" destination="37f-Nv-2jR" id="IZ7-FC-YsK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agO-Sm-y8n">
+                                <rect key="frame" x="279" y="98" width="80" height="25"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rankings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq0-xY-bt4">
+                                <rect key="frame" x="35" y="98" width="80" height="25"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                <color key="textColor" red="0.4823529412" green="0.039215686270000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Achievement" translatesAutoresizingMaskIntoConstraints="NO" id="HAr-Mf-rN2">
+                                <rect key="frame" x="271" y="11" width="71" height="66"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="pRC-fh-OWc" id="cJb-uV-Xhn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ude-s6-jfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737.5" y="1203.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xFN-co-Nc7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="79Q-jb-9va" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vPt-fQ-RuF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iq5-tF-10u" kind="relationship" relationship="rootViewController" id="NL1-nv-Pbf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOJ-3Y-x4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="381.50666666666649"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Achievement" width="442" height="427"/>
+        <image name="Menu_Base" width="1190" height="1306"/>
+        <image name="Ok" width="162" height="166"/>
+        <image name="Pause" width="162" height="166"/>
+        <image name="Refresh" width="162" height="166"/>
+        <image name="backBtn" width="162" height="166"/>
+        <image name="bak" width="1080" height="1920"/>
+        <image name="instruction" width="478" height="165"/>
+        <image name="instructions" width="470" height="186"/>
+        <image name="menuBack" width="904" height="1306"/>
+        <image name="paly" width="478" height="164"/>
+        <image name="records" width="478" height="165"/>
+        <image name="recordsTitle" width="372" height="166"/>
+        <image name="settings" width="478" height="166"/>
+        <image name="settingsTitle" width="375" height="179"/>
+        <image name="soundTitle" width="273" height="127"/>
+        <image name="title11" width="1190" height="238"/>
+        <image name="title12" width="825" height="166"/>
+        <image name="v1" width="388" height="238"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="TH8-Xe-C9O"/>
+        <segue reference="7u5-pr-10P"/>
+    </inferredMetricsTieBreakers>
+</document>

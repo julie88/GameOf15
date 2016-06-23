@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="MoveRecords" representedClassName=".MoveRecords" syncable="YES">
+        <attribute name="iMove" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="TimeRecords" representedClassName=".TimeRecords" syncable="YES">
+        <attribute name="iTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MoveRecords" positionX="-54" positionY="-9" width="128" height="60"/>
+        <element name="TimeRecords" positionX="-36" positionY="18" width="128" height="60"/>
+    </elements>
+</model>
